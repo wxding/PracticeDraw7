@@ -45,6 +45,17 @@ public class Practice03OfObjectView extends View {
         }
     }
 
+    float f;
+
+    public float getF() {
+        return f;
+    }
+
+    public void setF(float f) {
+        this.f = f;
+        invalidate();
+    }
+
     @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -56,6 +67,7 @@ public class Practice03OfObjectView extends View {
         float width = getWidth() - innerPaddingLeft - innterPaddingRight - RADIUS * 2;
         float height = getHeight() - innterPaddingTop - innterPaddingBottom - RADIUS * 2;
 
-        canvas.drawCircle(innerPaddingLeft + RADIUS + width * position.x, innterPaddingTop + RADIUS + height * position.y, RADIUS, paint);
+        canvas.drawCircle(innerPaddingLeft + RADIUS + width * f, innterPaddingTop + RADIUS + height * f, RADIUS, paint);
+
     }
 }
